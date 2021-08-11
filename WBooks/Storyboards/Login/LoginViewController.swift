@@ -14,8 +14,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnSignInPress(_ sender: Any) {
-        debugPrint("Ingresando....")
+        let exampleController = ExampleViewController()
+        navigationController?.pushViewController(exampleController, animated: true)
     }
-    
 
 }

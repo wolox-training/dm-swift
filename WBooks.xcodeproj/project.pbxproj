@@ -18,6 +18,10 @@
 		6ED8635C26C2494300A5E21D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED8635B26C2494300A5E21D /* LoginViewController.swift */; };
 		6ED8636426C2496700A5E21D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8636326C2496700A5E21D /* Login.storyboard */; };
 		6ED8637326C24A9000A5E21D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8637226C24A9000A5E21D /* Media.xcassets */; };
+		C986C50326C41D7F00F60F72 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C986C50226C41D7F00F60F72 /* NibView.swift */; };
+		C986C50526C41DFE00F60F72 /* ExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C986C50426C41DFE00F60F72 /* ExampleView.xib */; };
+		C986C50726C41E1000F60F72 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C986C50626C41E1000F60F72 /* ExampleView.swift */; };
+		C986C50926C41E3A00F60F72 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C986C50826C41E3A00F60F72 /* ExampleViewController.swift */; };
 		F812BF3849A843CB196C4FDC /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA1AFF1B311A9162A24151E /* Pods_WBooks_WBooksUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,10 @@
 		ACA1AFF1B311A9162A24151E /* Pods_WBooks_WBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks_WBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23E0CAA1B7A84036EE58E20 /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8665153AFB590E4280B0E2A /* Pods-WBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		C986C50226C41D7F00F60F72 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		C986C50426C41DFE00F60F72 /* ExampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleView.xib; sourceTree = "<group>"; };
+		C986C50626C41E1000F60F72 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		C986C50826C41E3A00F60F72 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		DA0D338BC8E12CDF53933817 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0FEE3E95BC13B5FFC1A055 /* Pods-WBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +128,8 @@
 		6E4527B926BD648F0008C123 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				C986C50126C41D5E00F60F72 /* Common */,
+				C986C50026C41D4800F60F72 /* Example Xib */,
 				6ED8637126C24A7000A5E21D /* Assets */,
 				6ED8635926C2490300A5E21D /* Storyboards */,
 				6ED862BC26C2239200A5E21D /* ConfigurationFiles */,
@@ -205,6 +215,24 @@
 				9BAE84C691491201654E55DF /* Pods-WBooksTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C986C50026C41D4800F60F72 /* Example Xib */ = {
+			isa = PBXGroup;
+			children = (
+				C986C50426C41DFE00F60F72 /* ExampleView.xib */,
+				C986C50626C41E1000F60F72 /* ExampleView.swift */,
+				C986C50826C41E3A00F60F72 /* ExampleViewController.swift */,
+			);
+			path = "Example Xib";
+			sourceTree = "<group>";
+		};
+		C986C50126C41D5E00F60F72 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C986C50226C41D7F00F60F72 /* NibView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +347,7 @@
 				6E4527C726BD64940008C123 /* LaunchScreen.storyboard in Resources */,
 				6ED8637326C24A9000A5E21D /* Media.xcassets in Resources */,
 				6E4527C426BD64940008C123 /* Assets.xcassets in Resources */,
+				C986C50526C41DFE00F60F72 /* ExampleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,9 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C986C50326C41D7F00F60F72 /* NibView.swift in Sources */,
 				6ED8635C26C2494300A5E21D /* LoginViewController.swift in Sources */,
 				6E4527BB26BD648F0008C123 /* AppDelegate.swift in Sources */,
 				6E4527BD26BD648F0008C123 /* SceneDelegate.swift in Sources */,
+				C986C50726C41E1000F60F72 /* ExampleView.swift in Sources */,
+				C986C50926C41E3A00F60F72 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
