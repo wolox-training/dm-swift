@@ -69,7 +69,7 @@ Carthage/Build/
 # CocoaPods
 
 Pods/
-
+Podfile.lock
 # Accio dependency management
 Dependencies/
 .accio/
