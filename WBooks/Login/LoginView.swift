@@ -15,6 +15,7 @@ final class LoginView: NibView {
             titleLabel.text = "Login"
         }
     }
+    
     @IBOutlet weak var loginButton: UIButton!{
         didSet {
             loginButton.titleLabel?.text = "Ingresar"
@@ -22,4 +23,3 @@ final class LoginView: NibView {
     }
     
 }
-

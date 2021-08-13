@@ -21,7 +21,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginPressed(){
-        debugPrint("Ingresando...")
+        let libraryController = LibraryViewController()
+        libraryController.modalPresentationStyle = .fullScreen
+        self.present(libraryController, animated: true, completion: nil)
     }
 
 }
