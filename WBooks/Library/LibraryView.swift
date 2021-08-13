@@ -10,13 +10,12 @@ import UIKit
 
 final class LibraryView: NibView {
     
-    @IBOutlet weak var tableView: UITableView!{
-        didSet{
-            let libraryTableViewCell = LibraryTableViewCell()
-            let nib = UINib.init(nibName: libraryTableViewCell.nibName, bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: libraryTableViewCell.identifier)
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            let nib = UINib(nibName: LibraryTableViewCell.nibName, bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: LibraryTableViewCell.identifier)
             tableView.separatorStyle = .none
-            tableView.backgroundColor = UIColor.init(red: 236, green: 246, blue: 249, alpha: 1)
+            tableView.backgroundColor = UIColor.booksLigthGray
         }
     }
     
