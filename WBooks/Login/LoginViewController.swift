@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         loginView.loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
     }
     
@@ -22,8 +23,7 @@ class LoginViewController: UIViewController {
     
     @objc private func loginPressed(){
         let libraryController = LibraryViewController()
-        libraryController.modalPresentationStyle = .fullScreen
-        self.present(libraryController, animated: true, completion: nil)
+        navigationController?.setViewControllers([libraryController], animated: true)
     }
 
 }

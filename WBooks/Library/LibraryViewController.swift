@@ -21,10 +21,22 @@ class LibraryViewController: UIViewController {
         super.viewDidLoad()
         libraryView.tableView.delegate = self
         libraryView.tableView.dataSource = self
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "notification"), style: .plain, target: self, action: #selector(notificationPress))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(searchPress))
+        title = "LIBRARY"
     }
     
     override func loadView() {
         view = libraryView
+    }
+    
+    @objc func notificationPress() {
+        debugPrint("Notificaciones...")
+    }
+    
+    @objc func searchPress() {
+        debugPrint("Notificaciones...")
     }
     
 }
