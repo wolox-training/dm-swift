@@ -9,11 +9,17 @@ import Foundation
 import UIKit
 
 extension UIFont {
-    static var booksTitle: UIFont {
-        return UIFont.init(name: "Gill Sans", size: 16)!
+    
+    static var gillSansTitle: UIFont {
+        return UIFont.gillSans(size: 16)
     }
     
-    static var booksAuthor: UIFont {
-        return UIFont.init(name: "Gill Sans", size: 14)!
+    static var gillSansSubtitle: UIFont {
+        return UIFont.gillSans(size: 14)
     }
+    
+    static func gillSans(size: CGFloat) -> UIFont {
+        return UIFont(name: "Gill Sans", size: size)!
+    }
+    
 }

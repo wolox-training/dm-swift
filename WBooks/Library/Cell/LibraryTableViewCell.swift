@@ -26,13 +26,13 @@ class LibraryTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.font = UIFont.booksTitle
+            titleLabel.font = UIFont.gillSansTitle
             titleLabel.textColor = UIColor.darkGray
         }
     }
     @IBOutlet weak var autorLabel: UILabel! {
         didSet {
-            autorLabel.font = UIFont.booksAuthor
+            autorLabel.font = UIFont.gillSansSubtitle
             autorLabel.textColor = UIColor.lightGray
         }
     }
@@ -44,7 +44,7 @@ class LibraryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.backgroundColor = UIColor.booksLigthGray
+        contentView.backgroundColor = UIColor.blackSqueeze
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
