@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by daniel.f.munoz on 18/08/21.
+  
+*/
+
+/* NAVIGATION CONTROLLER TITLES*/
+"TITLE_LIBRARY" = "LIBRARY";

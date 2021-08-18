@@ -24,7 +24,7 @@ class LibraryViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .notification, style: .plain, target: self, action: #selector(notificationPress))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .search, style: .plain, target: self, action: #selector(searchPress))
-        title = "LIBRARY"
+        title = NSLocalizedString("TITLE_LIBRARY", comment: "")
     }
     
     override func loadView() {
