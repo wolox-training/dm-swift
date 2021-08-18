@@ -22,8 +22,8 @@ class LibraryViewController: UIViewController {
         libraryView.tableView.delegate = self
         libraryView.tableView.dataSource = self
         navigationController?.navigationBar.isHidden = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "notification"), style: .plain, target: self, action: #selector(notificationPress))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(searchPress))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: .notification, style: .plain, target: self, action: #selector(notificationPress))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .search, style: .plain, target: self, action: #selector(searchPress))
         title = "LIBRARY"
     }
     
@@ -36,7 +36,7 @@ class LibraryViewController: UIViewController {
     }
     
     @objc func searchPress() {
-        debugPrint("Notificaciones...")
+        debugPrint("Buscador...")
     }
     
 }

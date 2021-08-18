@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10432DA226CCAAD5004CA44F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10432DA126CCAAD5004CA44F /* Images.swift */; };
 		104D041926C6B2CD00C755DA /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D041826C6B2CD00C755DA /* Book.swift */; };
 		104D041C26C6DBF800C755DA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D041B26C6DBF800C755DA /* Colors.swift */; };
 		104D041E26C6DC0200C755DA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D041D26C6DC0200C755DA /* Fonts.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10432DA126CCAAD5004CA44F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		104D041826C6B2CD00C755DA /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		104D041B26C6DBF800C755DA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		104D041D26C6DC0200C755DA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				104D041B26C6DBF800C755DA /* Colors.swift */,
 				104D041D26C6DC0200C755DA /* Fonts.swift */,
+				10432DA126CCAAD5004CA44F /* Images.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				105C318826C5DAB90070325C /* LibraryView.swift in Sources */,
+				10432DA226CCAAD5004CA44F /* Images.swift in Sources */,
 				104D041C26C6DBF800C755DA /* Colors.swift in Sources */,
 				105C317F26C5C03B0070325C /* NibView.swift in Sources */,
 				6ED8635C26C2494300A5E21D /* LoginViewController.swift in Sources */,
