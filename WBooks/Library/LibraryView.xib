@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-2q-sbq">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="10" width="375" height="657"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -29,7 +29,7 @@
                 <constraint firstItem="lOm-hu-hdS" firstAttribute="bottom" secondItem="bXi-2q-sbq" secondAttribute="bottom" id="Jfb-tH-RhX"/>
                 <constraint firstItem="bXi-2q-sbq" firstAttribute="leading" secondItem="lOm-hu-hdS" secondAttribute="leading" id="Vh6-jl-6Ry"/>
                 <constraint firstItem="lOm-hu-hdS" firstAttribute="trailing" secondItem="bXi-2q-sbq" secondAttribute="trailing" id="dzK-u9-UKs"/>
-                <constraint firstItem="bXi-2q-sbq" firstAttribute="top" secondItem="lOm-hu-hdS" secondAttribute="top" id="hEh-7M-e3K"/>
+                <constraint firstItem="bXi-2q-sbq" firstAttribute="top" secondItem="lOm-hu-hdS" secondAttribute="top" constant="10" id="hEh-7M-e3K"/>
             </constraints>
             <point key="canvasLocation" x="204" y="-40"/>
         </view>
