@@ -18,4 +18,44 @@ extension UIImage {
         return UIImage(named: "notification")!
     }
     
+    static var librarySelect: UIImage {
+        return UIImage(named: "tabBarLibrarySelect")!
+    }
+    
+    static var libraryUnSelect: UIImage {
+        return UIImage(named: "tabBarLibraryUnSelect")!
+    }
+    
+    static var wishlistSelect: UIImage {
+        return UIImage(named: "tabBarWishlistSelect")!
+    }
+    
+    static var wishlistUnSelect: UIImage {
+        return UIImage(named: "tabBarWishlistUnSelect")!
+    }
+    
+    static var addNewSelect: UIImage {
+        return UIImage(named: "tabBarAddNewSelect")!
+    }
+    
+    static var addNewUnSelect: UIImage {
+        return UIImage(named: "tabBarAddNewUnSelect")!
+    }
+    
+    static var rentalsSelect: UIImage {
+        return UIImage(named: "tabBarRentalsSelect")!
+    }
+    
+    static var rentalsUnselect: UIImage {
+        return UIImage(named: "tabBarRentalsUnSelect")!
+    }
+    
+    static var settingsSelect: UIImage {
+        return UIImage(named: "tabBarSettingsSelect")!
+    }
+    
+    static var settingsUnselect: UIImage {
+        return UIImage(named: "tabBarSettingsUnSelect")!
+    }
+    
 }

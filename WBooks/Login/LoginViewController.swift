@@ -22,8 +22,8 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginPressed(){
-        let libraryController = LibraryViewController()
-        navigationController?.setViewControllers([libraryController], animated: true)
+        let tabBarController = TabBarController()
+        navigationController?.setViewControllers([tabBarController], animated: true)
     }
 
 }
