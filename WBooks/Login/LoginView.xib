@@ -3,7 +3,6 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,25 +47,24 @@
                     </state>
                 </button>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="UOT-jC-jEb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="80" id="00a-ig-Bqo"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hGF-Of-Iyc" secondAttribute="trailing" constant="50" id="4R3-UE-fie"/>
+                <constraint firstItem="UOT-jC-jEb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="00a-ig-Bqo"/>
+                <constraint firstAttribute="trailing" secondItem="hGF-Of-Iyc" secondAttribute="trailing" constant="50" id="4R3-UE-fie"/>
                 <constraint firstItem="ghN-g9-gix" firstAttribute="top" secondItem="UOT-jC-jEb" secondAttribute="bottom" constant="70" id="5Uj-HY-jr5"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dSC-Ni-UKi" secondAttribute="bottom" id="8WR-XI-2Q5"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UOT-jC-jEb" secondAttribute="trailing" constant="50" id="Fwb-JH-gdw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ghN-g9-gix" secondAttribute="trailing" constant="50" id="HUA-WI-j2M"/>
-                <constraint firstItem="UOT-jC-jEb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="KLB-G4-eZC"/>
-                <constraint firstItem="ghN-g9-gix" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="OFE-F3-4Yb"/>
-                <constraint firstItem="hGF-Of-Iyc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="OuF-x9-cpY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dSC-Ni-UKi" secondAttribute="trailing" id="UTk-lc-vrj"/>
+                <constraint firstAttribute="bottom" secondItem="dSC-Ni-UKi" secondAttribute="bottom" id="8WR-XI-2Q5"/>
+                <constraint firstAttribute="trailing" secondItem="UOT-jC-jEb" secondAttribute="trailing" constant="50" id="Fwb-JH-gdw"/>
+                <constraint firstAttribute="trailing" secondItem="ghN-g9-gix" secondAttribute="trailing" constant="50" id="HUA-WI-j2M"/>
+                <constraint firstItem="UOT-jC-jEb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="KLB-G4-eZC"/>
+                <constraint firstItem="ghN-g9-gix" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="OFE-F3-4Yb"/>
+                <constraint firstItem="hGF-Of-Iyc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="OuF-x9-cpY"/>
+                <constraint firstAttribute="trailing" secondItem="dSC-Ni-UKi" secondAttribute="trailing" id="UTk-lc-vrj"/>
                 <constraint firstItem="bPO-Ld-gHo" firstAttribute="top" secondItem="ghN-g9-gix" secondAttribute="bottom" constant="10" id="WWE-eb-HCf"/>
                 <constraint firstItem="hGF-Of-Iyc" firstAttribute="top" secondItem="bPO-Ld-gHo" secondAttribute="bottom" constant="40" id="cT3-kh-Zt5"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bPO-Ld-gHo" secondAttribute="trailing" constant="50" id="jgc-2T-Cv0"/>
-                <constraint firstItem="dSC-Ni-UKi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="plG-nG-Shi"/>
-                <constraint firstItem="dSC-Ni-UKi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qfW-7n-QTr"/>
-                <constraint firstItem="bPO-Ld-gHo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="vHs-CR-mHZ"/>
+                <constraint firstAttribute="trailing" secondItem="bPO-Ld-gHo" secondAttribute="trailing" constant="50" id="jgc-2T-Cv0"/>
+                <constraint firstItem="dSC-Ni-UKi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="plG-nG-Shi"/>
+                <constraint firstItem="dSC-Ni-UKi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qfW-7n-QTr"/>
+                <constraint firstItem="bPO-Ld-gHo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="vHs-CR-mHZ"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="133.5832083958021"/>
         </view>
