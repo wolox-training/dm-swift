@@ -10,10 +10,10 @@ import UIKit
 class RentalsViewController: UIViewController {
     
     private lazy var rentalsView = RentalsView()
-    private let _rentalsViewModel: RentalsViewModel
+    private let rentalsViewModel: RentalsViewModel
     
     init(rentalsViewModel: RentalsViewModel) {
-        _rentalsViewModel = rentalsViewModel
+        self.rentalsViewModel = rentalsViewModel
         super.init(nibName: nil, bundle: nil)
     }
     

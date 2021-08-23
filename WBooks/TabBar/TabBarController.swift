@@ -12,40 +12,40 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let _libraryViewModel = LibraryViewModel()
-        let libraryViewController = LibraryViewController(libraryViewModel: _libraryViewModel)
+        let libraryViewModel = LibraryViewModel()
+        let libraryViewController = LibraryViewController(libraryViewModel: libraryViewModel)
         let navLibrary = createNavigationItem(controller: libraryViewController,
                                               tag: 0,
                                               title: "TITLE_LIBRARY",
                                               imageUnselect: .libraryUnSelect,
                                               imageSelect: .librarySelect)
         
-        let _wishListViewModel = WishlistViewModel()
-        let wishListViewController = WishListViewController(wishListViewModel: _wishListViewModel)
+        let wishListViewModel = WishlistViewModel()
+        let wishListViewController = WishListViewController(wishListViewModel: wishListViewModel)
         let navWishList = createNavigationItem(controller: wishListViewController,
                                                tag: 1,
                                                title: "TITLE_WISHLIST",
                                                imageUnselect: .wishlistUnSelect,
                                                imageSelect: .wishlistSelect)
         
-        let _addNewViewModel = AddNewViewModel()
-        let addNewViewController = AddNewViewController(addNewViewModel: _addNewViewModel)
+        let addNewViewModel = AddNewViewModel()
+        let addNewViewController = AddNewViewController(addNewViewModel: addNewViewModel)
         let navAddNew = createNavigationItem(controller: addNewViewController,
                                              tag: 2,
                                              title: "TITLE_ADDNEW",
                                              imageUnselect: .addNewUnSelect,
                                              imageSelect: .addNewSelect)
         
-        let _rentalsViewModel = RentalsViewModel()
-        let rentalsViewController = RentalsViewController(rentalsViewModel: _rentalsViewModel)
+        let rentalsViewModel = RentalsViewModel()
+        let rentalsViewController = RentalsViewController(rentalsViewModel: rentalsViewModel)
         let navRentals = createNavigationItem(controller: rentalsViewController,
                                               tag: 3,
                                               title: "TITLE_RENTALS",
                                               imageUnselect: .rentalsUnselect,
                                               imageSelect: .rentalsSelect)
         
-        let _settingsViewModel = SettingsViewModel()
-        let settingsViewController = SettingsViewController(settingsViewModel: _settingsViewModel)
+        let settingsViewModel = SettingsViewModel()
+        let settingsViewController = SettingsViewController(settingsViewModel: settingsViewModel)
         let navSettings = createNavigationItem(controller: settingsViewController,
                                                tag: 4,
                                                title: "TITLE_SETTINGS",

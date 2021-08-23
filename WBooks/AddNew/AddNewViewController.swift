@@ -10,10 +10,10 @@ import UIKit
 class AddNewViewController: UIViewController {
     
     private lazy var addNewView = AddNewView()
-    private let _addNewViewModel: AddNewViewModel
+    private let addNewViewModel: AddNewViewModel
     
     init(addNewViewModel: AddNewViewModel) {
-        _addNewViewModel = addNewViewModel
+        self.addNewViewModel = addNewViewModel
         super.init(nibName: nil, bundle: nil)
     }
     

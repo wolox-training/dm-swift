@@ -10,10 +10,10 @@ import UIKit
 class WishListViewController: UIViewController {
     
     private lazy var wishListView = WishListView()
-    private let _wishListViewModel: WishlistViewModel
+    private let wishListViewModel: WishlistViewModel
     
     init(wishListViewModel: WishlistViewModel) {
-        _wishListViewModel = wishListViewModel
+        self.wishListViewModel = wishListViewModel
         super.init(nibName: nil, bundle: nil)
     }
     

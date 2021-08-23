@@ -10,10 +10,10 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     private lazy var settingsView = SettingsView()
-    private let _settingsViewModel: SettingsViewModel
+    private let settingsViewModel: SettingsViewModel
     
     init(settingsViewModel: SettingsViewModel) {
-        _settingsViewModel = settingsViewModel
+        self.settingsViewModel = settingsViewModel
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -10,10 +10,10 @@ import UIKit
 class LibraryViewController: UIViewController {
     
     private lazy var libraryView = LibraryView()
-    private let _libraryViewModel: LibraryViewModel
+    private let libraryViewModel: LibraryViewModel
     
     init(libraryViewModel: LibraryViewModel) {
-        _libraryViewModel = libraryViewModel
+        self.libraryViewModel = libraryViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,11 +35,11 @@ class LibraryViewController: UIViewController {
     }
     
     @objc func notificationPress() {
-        _libraryViewModel.notification()
+        libraryViewModel.notification()
     }
     
     @objc func searchPress() {
-        _libraryViewModel.search()
+        libraryViewModel.search()
     }
     
 }
@@ -47,7 +47,7 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _libraryViewModel.books.count
+        return libraryViewModel.books.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,7 +58,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
                 
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.identifier, for: indexPath) as! LibraryTableViewCell
         
-        cell.setData(_libraryViewModel.books[indexPath.row])
+        cell.setData(libraryViewModel.books[indexPath.row])
 
         return cell
     }
