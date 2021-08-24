@@ -10,12 +10,16 @@ import UIKit
 class LibraryViewController: UIViewController {
     
     private lazy var libraryView = LibraryView()
+    private let libraryViewModel: LibraryViewModel
     
-    var dataMock : [Book] = [
-        Book(title: "Preuba", autor: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", image: "imageBookMock"),
-        Book(title: "Introduccion a navigation controllers", autor: "En nuestra aplicación tenemos", image: "imageBookMock"),
-        Book(title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", autor: "Daniel", image: "imageBookMock"),
-        Book(title: "Test", autor: "Test", image: "imageBookMock")]
+    init(libraryViewModel: LibraryViewModel) {
+        self.libraryViewModel = libraryViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +35,11 @@ class LibraryViewController: UIViewController {
     }
     
     @objc func notificationPress() {
-        debugPrint("Notificaciones...")
+        libraryViewModel.notification()
     }
     
     @objc func searchPress() {
-        debugPrint("Buscador...")
+        libraryViewModel.search()
     }
     
 }
@@ -43,7 +47,7 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataMock.count
+        return libraryViewModel.books.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -54,7 +58,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
                 
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.identifier, for: indexPath) as! LibraryTableViewCell
         
-        cell.setData(dataMock[indexPath.row])
+        cell.setData(libraryViewModel.books[indexPath.row])
 
         return cell
     }

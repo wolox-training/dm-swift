@@ -23,7 +23,7 @@ extension UIImage {
     }
     
     static var libraryUnSelect: UIImage {
-        return UIImage(named: "tabBarLibraryUnSelect")!
+        return UIImage(named: "tabBarLibraryUnselect")!
     }
     
     static var wishlistSelect: UIImage {
@@ -47,7 +47,7 @@ extension UIImage {
     }
     
     static var rentalsUnselect: UIImage {
-        return UIImage(named: "tabBarRentalsUnSelect")!
+        return UIImage(named: "tabBarRentalsUnselect")!
     }
     
     static var settingsSelect: UIImage {
@@ -55,7 +55,7 @@ extension UIImage {
     }
     
     static var settingsUnselect: UIImage {
-        return UIImage(named: "tabBarSettingsUnSelect")!
+        return UIImage(named: "tabBarSettingsUnselect")!
     }
     
 }
