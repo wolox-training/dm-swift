@@ -14,23 +14,12 @@ internal class BookRepository {
 
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books")!
 
-        AF.request(url).responseJSON { response in
+        AF.request(url).responseDecodable(of: [Book].self) { response in
 
             switch response.result {
 
             case .success(let value):
-
-                guard let JSONbooks = try? JSONSerialization.data( withJSONObject: value, options: []) else {
-                    onError(BookError.decodeError)
-                    return
-                }
-
-                guard let books = try? JSONDecoder().decode([Book].self, from: JSONbooks) else {
-                    onError(BookError.decodeError)
-                    return
-                }
-
-                onSuccess(books)
+                onSuccess(value)
                 
             case .failure(let error):
                 onError(error)
