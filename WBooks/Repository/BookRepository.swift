@@ -18,8 +18,8 @@ internal class BookRepository {
 
             switch response.result {
 
-            case .success(let value):
-                onSuccess(value)
+            case .success(let books):
+                onSuccess(books)
                 
             case .failure(let error):
                 onError(error)
