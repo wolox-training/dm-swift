@@ -28,6 +28,9 @@ class LibraryViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_LIBRARY", comment: "")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .notification, style: .plain, target: self, action: #selector(notificationPress))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .search, style: .plain, target: self, action: #selector(searchPress))
+        libraryViewModel.getBooks() {
+            self.libraryView.tableView.reloadData()
+        }
     }
     
     override func loadView() {
