@@ -9,14 +9,10 @@ import Foundation
 
 class LibraryViewModel {
     
-    let books: [Book]
+    var books: [Book]
     
     init() {
-        books = [
-            Book(title: "Prueba", autor: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", image: "imageBookMock"),
-            Book(title: "Introduccion a navigation controllers", autor: "En nuestra aplicación tenemos", image: "imageBookMock"),
-            Book(title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", autor: "Daniel", image: "imageBookMock"),
-            Book(title: "Test", autor: "Test", image: "imageBookMock")]
+        books = []
     }
     
     func notification(){
@@ -25,6 +21,21 @@ class LibraryViewModel {
     
     func search(){
         debugPrint("Buscador...")
+    }
+    
+    func getBooks(action: @escaping () -> () ) {
+        
+        let onSuccess = { (books: [Book]) in
+            self.books = books
+            action()
+        }
+                
+        let onError = { error in
+            debugPrint(error)
+        }
+        
+        let repository = BookRepository()
+        repository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
     
 }

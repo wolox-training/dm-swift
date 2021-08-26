@@ -58,4 +58,29 @@ extension UIImage {
         return UIImage(named: "tabBarSettingsUnselect")!
     }
     
+    static var bookDefault: UIImage {
+        return UIImage(named: "imageBookMock")!
+    }
+    
+}
+
+extension UIImageView {
+    
+    public func imageFromUrl(urlString: String) {
+        if let url = URL(string: urlString.replacingOccurrences(of: "http", with: "https")) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else {
+                    DispatchQueue.main.async {
+                        self.image = .bookDefault
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            }
+            task.resume()
+        }
+    }
+    
 }

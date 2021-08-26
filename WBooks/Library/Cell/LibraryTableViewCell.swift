@@ -54,8 +54,8 @@ class LibraryTableViewCell: UITableViewCell {
     func setData(_ data: Book) {
         self.data = data
         titleLabel.text = data.title
-        autorLabel.text = data.autor
-        bookImage?.image = UIImage(named: data.image!)
+        autorLabel.text = data.author
+        bookImage?.imageFromUrl(urlString: data.image)
     }
 
 }
