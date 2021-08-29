@@ -62,6 +62,10 @@ extension UIImage {
         return UIImage(named: "imageBookMock")!
     }
     
+    static var blueButton: UIImage {
+        return UIImage(named: "blueButton")!
+    }
+    
 }
 
 extension UIImageView {
