@@ -52,7 +52,7 @@ class DetailBookViewController: UIViewController {
     @objc func rentPress(sender: UIButton){
         if (detailBookViewModel.validateStatusRent()) {
             detailBookViewModel.rent(){ error in
-                if error != nil {
+                if error == nil {
                     self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""), message: NSLocalizedString("INFORMATION_SUCCESS", comment: ""), buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
                 } else {
                     self.showAlert(title: NSLocalizedString("TITLE_ERROR", comment: ""), message: NSLocalizedString("ERROR_GENERAL", comment: ""), buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))

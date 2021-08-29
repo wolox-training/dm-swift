@@ -62,18 +62,23 @@ class DetailBookViewModel {
         }
         
         let repository = RentRepository()
-        repository.setRent(id: 10, parameter: getParametersRent(), onSuccess: onSuccess, onError: onError)
+        repository.setRent(parameters: getParametersRent(), onSuccess: onSuccess, onError: onError)
     }
     
-    func getParametersRent() -> Parameters {
+    func getParametersRent() -> Rent {
         
-        let parameters: Parameters = [
-            "userID": 10,
-            "bookID": book.id,
-            "from": "2021-08-29",
-            "to": "2021-08-30"
-        ]
-                
+        let today = Date()
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        let parameters = Rent(
+            user_id: 10,
+            book_id: book.id,
+            from: formatter.string(from: today),
+            to: formatter.string(from: tomorrow)
+        )
+        
         return parameters
     }
     

@@ -9,15 +9,15 @@ import Foundation
 import Alamofire
 
 internal class RentRepository {
+    
+    public func setRent(parameters: Rent, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void) {
         
-    public func setRent(id: Int, parameter: Parameters, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void) {
+        let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/rents")!
         
-        let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/users/\(id)/rents")!
-        
-        AF.request(url, method: .post, parameters: parameter).responseDecodable(of: Rent.self) { response in
-
+        AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).responseDecodable(of: Rent.self) { response in
+            
             switch response.result {
-
+            
             case .success(let rent):
                 onSuccess(rent)
                 

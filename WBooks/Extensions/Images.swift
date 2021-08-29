@@ -71,7 +71,7 @@ extension UIImage {
 extension UIImageView {
     
     public func imageFromUrl(urlString: String) {
-        if let url = URL(string: urlString.replacingOccurrences(of: "http", with: "https")) {
+        if let url = URL(string: (urlString.contains("https")) ? urlString : urlString.replacingOccurrences(of: "http", with: "https")) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, error == nil else {
                     DispatchQueue.main.async {
