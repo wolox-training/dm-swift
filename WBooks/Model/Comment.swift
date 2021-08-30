@@ -14,7 +14,7 @@ internal struct Comment: Codable {
     let book_id: Int
     let content: String
     
-    enum Comment: String, CodingKey {
+    enum CodingKey: String {
         case id = "id"
         case user_id = "user_id"
         case book_id = "book_id"

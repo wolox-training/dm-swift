@@ -14,7 +14,8 @@ internal class UserRepository {
         
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/users/\(id)")!
         
-        AF.request(url).responseDecodable(of: User.self) { response in
+        AF.request(url)
+            .responseDecodable(of: User.self) { response in
 
             switch response.result {
 

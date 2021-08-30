@@ -14,7 +14,8 @@ internal class RentRepository {
         
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/rents")!
         
-        AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).responseDecodable(of: Rent.self) { response in
+        AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
+            .responseDecodable(of: Rent.self) { response in
             
             switch response.result {
             

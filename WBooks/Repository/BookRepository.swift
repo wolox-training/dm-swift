@@ -14,7 +14,8 @@ internal class BookRepository {
 
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books")!
 
-        AF.request(url).responseDecodable(of: [Book].self) { response in
+        AF.request(url)
+            .responseDecodable(of: [Book].self) { response in
 
             switch response.result {
 

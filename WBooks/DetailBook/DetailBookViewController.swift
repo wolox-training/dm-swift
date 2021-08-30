@@ -24,18 +24,37 @@ class DetailBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("TITLE_DETAILBOOK", comment: "")
+        setupTable()
+        setupView()
+        setupActions()
+        getComments()
+    }
+    
+    override func loadView() {
+        view = detailBookView
+    }
+    
+    func setupTable() {
         detailBookView.tableView.delegate = self
         detailBookView.tableView.dataSource = self
-        detailBookView.bookImage.imageFromUrl(urlString: detailBookViewModel.book.image)
-        detailBookView.titleLabel.text = detailBookViewModel.book.title
-        detailBookView.authorLabel.text = detailBookViewModel.book.author
-        detailBookView.yearLabel.text = detailBookViewModel.book.year
-        detailBookView.genreLabel.text = detailBookViewModel.book.genre
-        detailBookView.statusLabel.text = detailBookViewModel.book.status
-        
+    }
+    
+    func setupView() {
+        let book = detailBookViewModel.book
+        detailBookView.bookImage.imageFromUrl(urlString: book.image)
+        detailBookView.titleLabel.text = book.title
+        detailBookView.authorLabel.text = book.author
+        detailBookView.yearLabel.text = book.year
+        detailBookView.genreLabel.text = book.genre
+        detailBookView.statusLabel.text = book.status
+    }
+    
+    func setupActions() {
         detailBookView.rentButton.addTarget(self, action: #selector(rentPress), for: .touchUpInside)
         detailBookView.addWishlistButton.addTarget(self, action: #selector(addWishlistPress), for: .touchUpInside)
-        
+    }
+    
+    func getComments() {
         detailBookViewModel.getComments { comments in
             if comments.count > 0 {
                 self.detailBookView.tableView.reloadData()
@@ -45,21 +64,23 @@ class DetailBookViewController: UIViewController {
         }
     }
     
-    override func loadView() {
-        view = detailBookView
-    }
-    
     @objc func rentPress(sender: UIButton){
         if (detailBookViewModel.validateStatusRent()) {
             detailBookViewModel.rent(){ error in
                 if error == nil {
-                    self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""), message: NSLocalizedString("INFORMATION_SUCCESS", comment: ""), buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
+                    self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),
+                                   message: NSLocalizedString("INFORMATION_SUCCESS", comment: ""),
+                                   buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
                 } else {
-                    self.showAlert(title: NSLocalizedString("TITLE_ERROR", comment: ""), message: NSLocalizedString("ERROR_GENERAL", comment: ""), buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
+                    self.showAlert(title: NSLocalizedString("TITLE_ERROR", comment: ""),
+                                   message: NSLocalizedString("ERROR_GENERAL", comment: ""),
+                                   buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
                 }
             }
         } else {
-            self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""), message: NSLocalizedString("ERROR_UNAVAILABLE", comment: ""), buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
+            self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),
+                           message: NSLocalizedString("ERROR_UNAVAILABLE", comment: ""),
+                           buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
         }
     }
     
@@ -70,7 +91,7 @@ class DetailBookViewController: UIViewController {
     func showAlert(title: String, message: String, buttonDone: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: buttonDone, style: .default, handler: nil))
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
 
 }
@@ -89,11 +110,10 @@ extension DetailBookViewController: UITableViewDelegate, UITableViewDataSource {
                 
         let cell = tableView.dequeueReusableCell(withIdentifier: CommentsTableViewCell.identifier, for: indexPath) as! CommentsTableViewCell
         
-        detailBookViewModel.getUserComment(id: detailBookViewModel.comments[indexPath.row].user_id){ user in
+        detailBookViewModel.getUserComment(id: detailBookViewModel.getIdAuthor(indexPath.row)){ user in
             cell.setData(self.detailBookViewModel.comments[indexPath.row], user)
         }
         
-
         return cell
     }
     

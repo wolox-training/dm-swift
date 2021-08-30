@@ -39,10 +39,6 @@ class CommentsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         contentView.backgroundColor = UIColor.blackSqueeze
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     func setData(_ data: Comment, _ user: User) {
         self.data = data

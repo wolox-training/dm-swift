@@ -82,6 +82,10 @@ class DetailBookViewModel {
         return parameters
     }
     
+    func getIdAuthor(_ index: Int) -> Int {
+        return comments[index].user_id
+    }
+    
     func addWishList() {
         debugPrint("Add to wishlist press...")
     }

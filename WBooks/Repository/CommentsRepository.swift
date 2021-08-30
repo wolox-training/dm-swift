@@ -14,7 +14,8 @@ internal class CommentsRepository {
         
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books/\(id)/comments")!
         
-        AF.request(url).responseDecodable(of: [Comment].self) { response in
+        AF.request(url)
+            .responseDecodable(of: [Comment].self) { response in
 
             switch response.result {
 
