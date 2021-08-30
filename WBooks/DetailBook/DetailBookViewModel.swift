@@ -83,7 +83,7 @@ class DetailBookViewModel {
     }
     
     func getIdAuthor(_ index: Int) -> Int {
-        return comments[index].user_id
+        return comments[index].userId
     }
     
     func addWishList() {
