@@ -29,7 +29,3 @@ internal class BookRepository {
     }
     
 }
-
-enum BookError: Error {
-    case decodeError
-}

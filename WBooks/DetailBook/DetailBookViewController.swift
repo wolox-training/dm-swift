@@ -56,7 +56,7 @@ class DetailBookViewController: UIViewController {
     
     func getComments() {
         detailBookViewModel.getComments { comments in
-            if comments.count > 0 {
+            if !comments.isEmpty {
                 self.detailBookView.tableView.reloadData()
             } else {
                 self.detailBookView.commentsView.isHidden = true
@@ -65,7 +65,7 @@ class DetailBookViewController: UIViewController {
     }
     
     @objc func rentPress(sender: UIButton){
-        if (detailBookViewModel.validateStatusRent()) {
+        if (detailBookViewModel.isAvaibleRent()) {
             detailBookViewModel.rent(){ error in
                 if error == nil {
                     self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),

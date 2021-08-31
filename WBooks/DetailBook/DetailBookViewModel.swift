@@ -47,7 +47,7 @@ class DetailBookViewModel {
         repository.getUser(id: id, onSuccess: onSuccess, onError: onError)
     }
     
-    func validateStatusRent() -> Bool {
+    func isAvaibleRent() -> Bool {
         return book.status == "Available"
     }
     

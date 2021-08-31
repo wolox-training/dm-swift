@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal struct Rent: Codable {
+struct Rent: Codable {
     
     let user_id: Int
     let book_id: Int
