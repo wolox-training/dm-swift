@@ -23,11 +23,23 @@ class LibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_LIBRARY", comment: "")
+        setupView()
+        setupActions()
+        getBooks()
+    }
+    
+    func setupView() {
         libraryView.tableView.delegate = self
         libraryView.tableView.dataSource = self
-        navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_LIBRARY", comment: "")
+    }
+    
+    func setupActions() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .notification, style: .plain, target: self, action: #selector(notificationPress))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .search, style: .plain, target: self, action: #selector(searchPress))
+    }
+    
+    func getBooks() {
         libraryViewModel.getBooks() {
             self.libraryView.tableView.reloadData()
         }

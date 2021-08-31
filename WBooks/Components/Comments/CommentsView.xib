@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="generalView" destination="NhA-0o-4wd" id="Pz9-TV-Yxc"/>
+                <outlet property="tableView" destination="Bqo-wv-pBp" id="dMH-bt-fRT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NhA-0o-4wd">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="342"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bqo-wv-pBp">
+                    <rect key="frame" x="5" y="5" width="325" height="332"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ctJ-uO-tHx"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ctJ-uO-tHx" firstAttribute="bottom" secondItem="Bqo-wv-pBp" secondAttribute="bottom" constant="5" id="VGy-py-11E"/>
+                <constraint firstItem="Bqo-wv-pBp" firstAttribute="leading" secondItem="ctJ-uO-tHx" secondAttribute="leading" constant="5" id="cEJ-aS-Dq7"/>
+                <constraint firstItem="Bqo-wv-pBp" firstAttribute="top" secondItem="ctJ-uO-tHx" secondAttribute="top" constant="5" id="sQL-ln-Hta"/>
+                <constraint firstItem="ctJ-uO-tHx" firstAttribute="trailing" secondItem="Bqo-wv-pBp" secondAttribute="trailing" constant="5" id="swv-H6-2Vu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="224.80000000000001" y="146.62668665667167"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
