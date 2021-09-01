@@ -29,7 +29,3 @@ internal class CommentsRepository {
     }
     
 }
-
-enum CommentError: Error {
-    case decodeError
-}

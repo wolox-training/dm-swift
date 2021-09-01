@@ -29,7 +29,3 @@ internal class UserRepository {
     }
     
 }
-
-enum UserError: Error {
-    case decodeError
-}

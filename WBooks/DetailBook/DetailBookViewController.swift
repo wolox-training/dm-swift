@@ -55,5 +55,50 @@ class DetailBookViewController: UIViewController {
         detailBookView.commentsView.addSubview(child.view)
         child.didMove(toParent: self)
     }
+    
+    func setupActions() {
+        detailBookView.rentButton.addTarget(self, action: #selector(rentPress), for: .touchUpInside)
+        detailBookView.addWishlistButton.addTarget(self, action: #selector(addWishlistPress), for: .touchUpInside)
+    }
+    
+    func getComments() {
+        detailBookViewModel.getComments { comments in
+            if !comments.isEmpty {
+                self.detailBookView.tableView.reloadData()
+            } else {
+                self.detailBookView.commentsView.isHidden = true
+            }
+        }
+    }
+    
+    @objc func rentPress(sender: UIButton){
+        if (detailBookViewModel.isAvaibleRent()) {
+            detailBookViewModel.rent(){ error in
+                if error == nil {
+                    self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),
+                                   message: NSLocalizedString("INFORMATION_SUCCESS", comment: ""),
+                                   buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
+                } else {
+                    self.showAlert(title: NSLocalizedString("TITLE_ERROR", comment: ""),
+                                   message: NSLocalizedString("ERROR_GENERAL", comment: ""),
+                                   buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
+                }
+            }
+        } else {
+            self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),
+                           message: NSLocalizedString("ERROR_UNAVAILABLE", comment: ""),
+                           buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
+        }
+    }
+    
+    @objc func addWishlistPress(sender: UIButton){
+        detailBookViewModel.addWishList()
+    }
+    
+    func showAlert(title: String, message: String, buttonDone: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonDone, style: .default, handler: nil))
+        present(alert, animated: true)
+    }
 
 }

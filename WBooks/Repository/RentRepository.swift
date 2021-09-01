@@ -29,7 +29,3 @@ internal class RentRepository {
     }
     
 }
-
-enum RentError: Error {
-    case decodeError
-}
