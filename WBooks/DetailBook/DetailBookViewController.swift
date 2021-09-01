@@ -34,25 +34,18 @@ class DetailBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("TITLE_DETAILBOOK", comment: "")
-        addSectionDetail(detailViewController)
-        addSectionComments(commentsViewController)
+        addSection(detailViewController, detailBookView.generalView)
+        addSection(commentsViewController, detailBookView.commentsView)
     }
     
     override func loadView() {
         view = detailBookView
     }
     
-    private func addSectionDetail(_ child: UIViewController) {
+    private func addSection(_ child: UIViewController, _ viewFrame: UIView) {
         addChild(child)
-        child.view.frame = detailBookView.generalView.frame
-        detailBookView.generalView.addSubview(child.view)
-        child.didMove(toParent: self)
-    }
-    
-    private func addSectionComments(_ child: UIViewController) {
-        addChild(child)
-        child.view.frame = detailBookView.commentsView.frame
-        detailBookView.commentsView.addSubview(child.view)
+        viewFrame.addSubview(child.view)
+        viewFrame.addSubViewWithConstraints(child: child.view, parent: viewFrame)
         child.didMove(toParent: self)
     }
 

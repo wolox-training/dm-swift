@@ -27,6 +27,10 @@ class DetailViewController: UIViewController {
         setupActions()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        detailView.rentButton.withGradient()
+    }
+    
     override func loadView() {
         view = detailView
     }

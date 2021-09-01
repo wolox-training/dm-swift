@@ -21,12 +21,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUE-5g-bPp">
-                    <rect key="frame" x="20" y="330" width="335" height="342"/>
-                    <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    <rect key="frame" x="20" y="320" width="335" height="352"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-cP-xIq">
-                    <rect key="frame" x="20" y="30" width="335" height="285"/>
-                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <rect key="frame" x="20" y="20" width="335" height="285"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="285" id="qQP-MJ-W20"/>
                     </constraints>
@@ -35,7 +33,7 @@
             <viewLayoutGuide key="safeArea" id="bI5-46-fJW"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0l7-cP-xIq" firstAttribute="top" secondItem="bI5-46-fJW" secondAttribute="top" constant="30" id="7Ga-li-CER"/>
+                <constraint firstItem="0l7-cP-xIq" firstAttribute="top" secondItem="bI5-46-fJW" secondAttribute="top" constant="20" id="7Ga-li-CER"/>
                 <constraint firstItem="mUE-5g-bPp" firstAttribute="top" secondItem="0l7-cP-xIq" secondAttribute="bottom" constant="15" id="JH4-IU-mmr"/>
                 <constraint firstItem="bI5-46-fJW" firstAttribute="trailing" secondItem="mUE-5g-bPp" secondAttribute="trailing" constant="20" id="TvG-ll-nae"/>
                 <constraint firstItem="bI5-46-fJW" firstAttribute="trailing" secondItem="0l7-cP-xIq" secondAttribute="trailing" constant="20" id="aSL-kV-eIb"/>
@@ -47,12 +45,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
