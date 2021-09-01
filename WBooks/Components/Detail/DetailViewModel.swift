@@ -15,7 +15,7 @@ class DetailViewModel {
         self.book = book
     }
     
-    func validateStatusRent() -> Bool {
+    func isAvaibleRent() -> Bool {
         return book.status == "Available"
     }
     

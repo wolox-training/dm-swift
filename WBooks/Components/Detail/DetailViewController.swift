@@ -47,7 +47,7 @@ class DetailViewController: UIViewController {
     }
     
     @objc func rentPress(sender: UIButton){
-        if (detailViewModel.validateStatusRent()) {
+        if (detailViewModel.isAvaibleRent()) {
             detailViewModel.rent(){ error in
                 if error == nil {
                     self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),

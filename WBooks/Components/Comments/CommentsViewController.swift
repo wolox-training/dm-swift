@@ -38,7 +38,7 @@ class CommentsViewController: UIViewController {
     
     func getComments() {
         commentsViewModel.getComments { comments in
-            if comments.count > 0 {
+            if !comments.isEmpty {
                 self.commentsView.tableView.reloadData()
             } else {
                 self.commentsView.generalView.isHidden = true
