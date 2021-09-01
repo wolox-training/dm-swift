@@ -66,4 +66,10 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailBookViewModel = DetailBookViewModel(book: libraryViewModel.books[indexPath.row])
+        let detailBookViewController = DetailBookViewController(detailBookViewModel: detailBookViewModel)
+        navigationController?.pushViewController(detailBookViewController, animated: true)
+    }
+    
 }

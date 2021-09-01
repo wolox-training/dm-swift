@@ -18,4 +18,12 @@ extension UIColor {
         return UIColor(red: 100/255, green: 172/255, blue: 227/255, alpha: 1)
     }
     
+    static var wildWillow: UIColor {
+        return UIColor(red: 184/255, green: 203/255, blue: 108/255, alpha: 1)
+    }
+    
+    static var cornflower: UIColor {
+        return UIColor(red: 135/255, green: 190/255, blue: 232/255, alpha: 1)
+    }
+    
 }

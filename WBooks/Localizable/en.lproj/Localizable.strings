@@ -12,3 +12,16 @@
 "TITLE_ADDNEW" = "ADD NEW";
 "TITLE_RENTALS" = "RENTALS";
 "TITLE_SETTINGS" = "SETTINGS";
+"TITLE_DETAILBOOK" = "DETAIL";
+
+/* TITLES BUTTONS */
+"BUTTON_WIHSLIST" = "ADD TO WISHLIST";
+"BUTTON_RENT" = "RENT";
+
+/* ALERTS */
+"TITLE_INFORMATION" = "INFORMATION";
+"TITLE_ERROR" = "ERROR";
+"BUTTON_DONE" = "DONE";
+"ERROR_UNAVAILABLE" = "The book is unavailable";
+"ERROR_GENERAL" = "The book could not be rented, try again later";
+"INFORMATION_SUCCESS" = "The book has been reserved successfully";
