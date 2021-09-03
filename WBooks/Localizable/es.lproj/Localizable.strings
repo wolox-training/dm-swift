@@ -9,7 +9,7 @@
 /* NAVIGATION CONTROLLER TITLES*/
 "TITLE_LIBRARY" = "LIBRERIA";
 "TITLE_WISHLIST" = "LISTA DE DESEO";
-"TITLE_ADDNEW" = "AGREGAR NUEVO";
+"TITLE_ADDNEW" = "AGREGAR LIBRO NUEVO";
 "TITLE_RENTALS" = "ALQUILER";
 "TITLE_SETTINGS" = "CONFIGURACIÓN";
 "TITLE_DETAILBOOK" = "DETALLE";
@@ -17,6 +17,7 @@
 /* TITLES BUTTONS */
 "BUTTON_WIHSLIST" = "AGREGAR A LA LISTA DE DESEOS";
 "BUTTON_RENT" = "RENTAR";
+"BUTTON_SUBMIT" = "ENVIAR";
 
 /* ALERTS */
 "TITLE_INFORMATION" = "INFORMACIÓN";
@@ -24,4 +25,17 @@
 "BUTTON_DONE" = "ACEPTAR";
 "ERROR_UNAVAILABLE" = "El libro no se encuentra disponible";
 "ERROR_GENERAL" = "No se ha podido rentar el libro, intentelo mas tarde";
+"ERROR_ADDBOOK" = "No se ha podido añadir el libro, intentelo mas tarde";
+"ERROR_EMPY_TEXTFLIED" = "Los campos no pueden estar vacios";
 "INFORMATION_SUCCESS" = "El libro se ha reservado correctamente";
+"ADDBOOK_SUCCESS" = "El libro ha sido agregado con exito";
+"OPTION_GALLERY" = "Galeria";
+"OPTION_CAMERA" = "Camara";
+"OPTION_CANCEL" = "Cancelar";
+
+/* TEXTFIELD PLACEHOLDER */
+"BOOK_NAME_TEXTFIELD" = "Nombre del libro";
+"YEAR_TEXTFIELD" = "Año";
+"AUTHOR_TEXTIFLED" = "Autor";
+"TOPIC_TEXTIFLED" = "Tema";
+"DESCRIPTION_TEXTIFLED" = "Descripción";

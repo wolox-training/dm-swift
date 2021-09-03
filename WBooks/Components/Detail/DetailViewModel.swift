@@ -10,9 +10,11 @@ import Foundation
 class DetailViewModel {
     
     let book: Book
+    let userId: Int
     
     init(book: Book) {
         self.book = book
+        self.userId = 10
     }
     
     func isAvaibleRent() -> Bool {
@@ -41,7 +43,7 @@ class DetailViewModel {
         formatter.dateFormat = "yyyy-MM-dd"
         
         let parameters = Rent(
-            userId: 10,
+            userId: userId,
             bookId: book.id,
             from: formatter.string(from: today),
             to: formatter.string(from: tomorrow)
