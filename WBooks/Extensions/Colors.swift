@@ -26,4 +26,12 @@ extension UIColor {
         return UIColor(red: 135/255, green: 190/255, blue: 232/255, alpha: 1)
     }
     
+    static var pictonBlue: UIColor {
+        return UIColor(red: 75/255, green: 172/255, blue: 230/255, alpha: 1)
+    }
+        
+    static var downy: UIColor {
+        return UIColor(red: 103/255, green: 201/255, blue: 204/255, alpha: 1)
+    }
+    
 }
