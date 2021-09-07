@@ -25,7 +25,6 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ctJ-uO-tHx"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ctJ-uO-tHx" firstAttribute="bottom" secondItem="Bqo-wv-pBp" secondAttribute="bottom" constant="5" id="VGy-py-11E"/>
                 <constraint firstItem="Bqo-wv-pBp" firstAttribute="leading" secondItem="ctJ-uO-tHx" secondAttribute="leading" constant="5" id="cEJ-aS-Dq7"/>

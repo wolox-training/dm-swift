@@ -12,8 +12,14 @@ class LibraryViewController: UIViewController {
     private lazy var libraryView = LibraryView()
     private let libraryViewModel: LibraryViewModel
     
+    private var booksViewController: BooksViewController
+    
     init(libraryViewModel: LibraryViewModel) {
         self.libraryViewModel = libraryViewModel
+        
+        let booksViewModel = libraryViewModel.createBooksViewModel()
+        booksViewController = BooksViewController(booksViewModel: booksViewModel)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,14 +30,8 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_LIBRARY", comment: "")
-        setupView()
         setupActions()
-        getBooks()
-    }
-    
-    func setupView() {
-        libraryView.tableView.delegate = self
-        libraryView.tableView.dataSource = self
+        getRents()
     }
     
     func setupActions() {
@@ -39,9 +39,11 @@ class LibraryViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .search, style: .plain, target: self, action: #selector(searchPress))
     }
     
-    func getBooks() {
-        libraryViewModel.getBooks() {
-            self.libraryView.tableView.reloadData()
+    func getRents() {
+        libraryViewModel.getBooks() { [self] in
+            let booksViewModel = libraryViewModel.createBooksViewModel()
+            booksViewController = BooksViewController(booksViewModel: booksViewModel)
+            addSection(booksViewController, libraryView.booksContent)
         }
     }
     
@@ -57,31 +59,11 @@ class LibraryViewController: UIViewController {
         libraryViewModel.search()
     }
     
-}
+    private func addSection(_ child: UIViewController, _ viewFrame: UIView) {
+        addChild(child)
+        viewFrame.addSubview(child.view)
+        viewFrame.addSubViewWithConstraints(child: child.view, parent: viewFrame)
+        child.didMove(toParent: self)
+    }
 
-extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return libraryViewModel.books.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                
-        let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.identifier, for: indexPath) as! LibraryTableViewCell
-        
-        cell.setData(libraryViewModel.books[indexPath.row])
-
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailBookViewModel = DetailBookViewModel(book: libraryViewModel.books[indexPath.row])
-        let detailBookViewController = DetailBookViewController(detailBookViewModel: detailBookViewModel)
-        navigationController?.pushViewController(detailBookViewController, animated: true)
-    }
-    
 }

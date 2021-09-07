@@ -28,6 +28,24 @@ internal class BookRepository {
         }
     }
     
+    public func getBook(id: Int, onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void) {
+
+        let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books/\(id)")!
+
+        AF.request(url)
+            .responseDecodable(of: Book.self) { response in
+
+            switch response.result {
+
+            case .success(let book):
+                onSuccess(book)
+                
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
+    
     public func addBook(parameters: BookRequest, onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void) {
 
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books")!

@@ -37,7 +37,7 @@ class CommentsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.backgroundColor = UIColor.blackSqueeze
+        contentView.backgroundColor = UIColor.white
     }
     
     func setData(_ data: Comment, _ user: User) {

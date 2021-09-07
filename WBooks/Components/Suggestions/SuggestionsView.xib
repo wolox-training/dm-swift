@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuggestionsView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="generalView" destination="0ur-0G-Sze" id="jjD-eL-Rc2"/>
+                <outlet property="suggestionsTitle" destination="YCz-5A-lAN" id="xDT-9T-nIK"/>
+                <outlet property="suggestsBooks" destination="mkx-5a-XB5" id="7w8-Jm-0aV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0ur-0G-Sze">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCz-5A-lAN">
+                    <rect key="frame" x="20" y="10" width="364" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkx-5a-XB5">
+                    <rect key="frame" x="20" y="40.5" width="364" height="143.5"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vYe-Yv-EVZ"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mkx-5a-XB5" firstAttribute="leading" secondItem="vYe-Yv-EVZ" secondAttribute="leading" constant="20" id="37v-CT-QlX"/>
+                <constraint firstItem="YCz-5A-lAN" firstAttribute="leading" secondItem="vYe-Yv-EVZ" secondAttribute="leading" constant="20" id="An3-UG-a1p"/>
+                <constraint firstItem="vYe-Yv-EVZ" firstAttribute="trailing" secondItem="YCz-5A-lAN" secondAttribute="trailing" constant="20" id="bFh-Bg-lKe"/>
+                <constraint firstItem="YCz-5A-lAN" firstAttribute="top" secondItem="vYe-Yv-EVZ" secondAttribute="top" constant="10" id="cCK-or-FUn"/>
+                <constraint firstItem="mkx-5a-XB5" firstAttribute="top" secondItem="YCz-5A-lAN" secondAttribute="bottom" constant="10" id="fSR-GR-RTT"/>
+                <constraint firstItem="vYe-Yv-EVZ" firstAttribute="bottom" secondItem="mkx-5a-XB5" secondAttribute="bottom" constant="10" id="lfX-ho-ds6"/>
+                <constraint firstItem="vYe-Yv-EVZ" firstAttribute="trailing" secondItem="mkx-5a-XB5" secondAttribute="trailing" constant="20" id="n0N-Nt-xuR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="169.59999999999999" y="-51.27436281859071"/>
+        </view>
+    </objects>
+</document>

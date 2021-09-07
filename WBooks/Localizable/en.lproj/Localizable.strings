@@ -39,3 +39,6 @@
 "AUTHOR_TEXTIFLED" = "Author";
 "TOPIC_TEXTIFLED" = "Topic";
 "DESCRIPTION_TEXTIFLED" = "Description";
+
+/* COMPONENTS */
+"TITLE_SUGGESTIONS" = "Suggestions";
