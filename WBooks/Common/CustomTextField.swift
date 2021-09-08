@@ -32,17 +32,17 @@ open class CustomTextField: UITextField {
         addTarget(self, action: #selector(isValid), for: .editingDidEnd)
     }
     
+    func changerBorderColor(borderColor: UIColor) {
+        layer.sublayers?[1].borderColor = borderColor.cgColor
+    }
+    
     public func isValidValue() -> Bool {
         isValid()
         return !text!.isEmpty
     }
     
     @objc func isValid() {
-        if text!.isEmpty {
-            config(borderColor: UIColor.red)
-        } else {
-            config(borderColor: UIColor.lightGray)
-        }
+        changerBorderColor(borderColor: (text!.isEmpty) ? UIColor.red : UIColor.lightGray)
     }
     
 }

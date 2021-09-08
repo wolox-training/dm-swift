@@ -19,7 +19,6 @@ struct Book: Codable {
 
 }
 
-
 struct BookRequest: Codable {
     
     let title: String
