@@ -71,7 +71,7 @@ class AddNewViewController: UIViewController {
     }
     
     @objc func validateAddBook() {
-        if isEmpyForm() {
+        if isEmptyForm() {
             addNewViewModel.setParametersBook(
                 title: addNewView.bookNameTextField.text ?? "",
                 author: addNewView.authorTextField.text ?? "",
@@ -87,13 +87,12 @@ class AddNewViewController: UIViewController {
     
     func addBook()  {
         addNewViewModel.addNewBook() { error in
+            self.cleanForm()
             if error == nil {
-                self.cleanForm()
                 self.showAlert(title: NSLocalizedString("TITLE_INFORMATION", comment: ""),
                                message: NSLocalizedString("ADDBOOK_SUCCESS", comment: ""),
                                buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
             } else {
-                self.cleanForm()
                 self.showAlert(title: NSLocalizedString("TITLE_ERROR", comment: ""),
                                message: NSLocalizedString("ERROR_ADDBOOK", comment: ""),
                                buttonDone: NSLocalizedString("BUTTON_DONE", comment: ""))
@@ -101,8 +100,12 @@ class AddNewViewController: UIViewController {
         }
     }
     
-    func isEmpyForm() -> Bool {
-        return addNewView.bookNameTextField.isValidValue() && addNewView.authorTextField.isValidValue() && addNewView.yearTextField.isValidValue() && addNewView.topicTextField.isValidValue() && addNewView.descriptionTextField.isValidValue()
+    func isEmptyForm() -> Bool {
+        return addNewView.bookNameTextField.isValidValue() &&
+            addNewView.authorTextField.isValidValue() &&
+            addNewView.yearTextField.isValidValue() &&
+            addNewView.topicTextField.isValidValue() &&
+            addNewView.descriptionTextField.isValidValue()
     }
     
     func showAlert(title: String, message: String, buttonDone: String) {
