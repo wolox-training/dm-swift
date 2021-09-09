@@ -15,6 +15,7 @@ final class LibraryView: NibView {
             generalView.backgroundColor = UIColor.blackSqueeze
         }
     }
+    
     @IBOutlet weak var booksContent: UIView!
     
 }

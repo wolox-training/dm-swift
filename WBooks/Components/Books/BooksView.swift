@@ -11,10 +11,11 @@ import UIKit
 final class BooksView: NibView {
     
     @IBOutlet var generalView: UIView! {
-        didSet{
+        didSet {
             generalView.backgroundColor = UIColor.blackSqueeze
         }
     }
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             let nib = UINib(nibName: LibraryTableViewCell.nibName, bundle: nil)

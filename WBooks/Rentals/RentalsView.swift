@@ -10,12 +10,14 @@ import UIKit
 
 final class RentalsView: NibView {
     
-    @IBOutlet var view: UIView!{
-        didSet{
+    @IBOutlet var view: UIView! {
+        didSet {
             view.backgroundColor = UIColor.blackSqueeze
         }
     }
+    
     @IBOutlet weak var booksView: UIView!
+    
     @IBOutlet weak var suggestionsBooksView: UIView!
     
 }

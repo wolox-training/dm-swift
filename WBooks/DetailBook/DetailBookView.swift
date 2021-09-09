@@ -10,12 +10,14 @@ import UIKit
 
 final class DetailBookView: NibView {
     
-    @IBOutlet var view: UIView!{
-        didSet{
+    @IBOutlet var view: UIView! {
+        didSet {
             view.backgroundColor = UIColor.blackSqueeze
         }
     }
+    
     @IBOutlet weak var generalView: UIView!
+    
     @IBOutlet weak var commentsView: UIView!
     
 }

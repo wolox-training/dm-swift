@@ -20,9 +20,11 @@ class SuggestionsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        suggestionView.suggestBooks.delegate = self
+        suggestionView.suggestBooks.dataSource = self
         getSuggestions()
     }
     
@@ -31,13 +33,27 @@ class SuggestionsViewController: UIViewController {
     }
     
     func getSuggestions() {
-        suggestionsViewModel.getSuggestions { suggestions in
-            if !suggestions.isEmpty {
-                print(suggestions)
+        suggestionsViewModel.getSuggestions { books in
+            if !books.isEmpty {
+                self.suggestionView.suggestBooks.reloadData()
             } else {
                 self.suggestionView.generalView.isHidden = true
             }
         }
+    }
+    
+}
+
+extension SuggestionsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return suggestionsViewModel.suggestions.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SuggestionsCollectionViewCell.identifier, for: indexPath) as! SuggestionsCollectionViewCell
+        cell.setData(suggestionsViewModel.suggestions[indexPath.row])
+        return cell
     }
 
 }
