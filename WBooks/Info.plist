@@ -60,5 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Se necesita la camara para seleccionar la fotografia del libro</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Se necesita el acceso a la galeria para seleccionar la fotografia del libro</string>
 </dict>
 </plist>

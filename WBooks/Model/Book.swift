@@ -18,3 +18,14 @@ struct Book: Codable {
     let status: String
 
 }
+
+struct BookRequest: Codable {
+    
+    let title: String
+    let author: String
+    let genre: String
+    let year: String
+    let image: String
+    let status: String
+
+}

@@ -62,6 +62,7 @@
 		105C318D26C6099D0070325C /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105C318C26C6099D0070325C /* LibraryTableViewCell.swift */; };
 		105C318F26C60B8F0070325C /* LibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 105C318E26C60B8F0070325C /* LibraryTableViewCell.xib */; };
 		10789F8926DFC16B00B7CB19 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10789F8826DFC16B00B7CB19 /* Views.swift */; };
+		10789F8D26E27EBB00B7CB19 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10789F8C26E27EBB00B7CB19 /* CustomTextField.swift */; };
 		32882C24C3FCFE32BC0A8E6D /* Pods_WBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E4485C6208B5965D1D114E /* Pods_WBooksTests.framework */; };
 		4878573461A83033F248EBBB /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0D338BC8E12CDF53933817 /* Pods_WBooks.framework */; };
 		6E4527BB26BD648F0008C123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4527BA26BD648F0008C123 /* AppDelegate.swift */; };
@@ -150,6 +151,7 @@
 		105C318C26C6099D0070325C /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		105C318E26C60B8F0070325C /* LibraryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTableViewCell.xib; sourceTree = "<group>"; };
 		10789F8826DFC16B00B7CB19 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		10789F8C26E27EBB00B7CB19 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1634E926E8A89FB08B0FFBA3 /* Pods-WBooks-WBooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.release.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30E4485C6208B5965D1D114E /* Pods_WBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4527B726BD648F0008C123 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				105C317E26C5C03B0070325C /* NibView.swift */,
+				10789F8C26E27EBB00B7CB19 /* CustomTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				104D041E26C6DC0200C755DA /* Fonts.swift in Sources */,
 				100B7B3E26DE77970093344F /* CommentsView.swift in Sources */,
 				10432DCA26CEAF96004CA44F /* AddNewView.swift in Sources */,
+				10789F8D26E27EBB00B7CB19 /* CustomTextField.swift in Sources */,
 				10432DC626CEAF43004CA44F /* RentalsViewController.swift in Sources */,
 				105C318626C5D8A60070325C /* LibraryViewController.swift in Sources */,
 				10432DD626D3F5FA004CA44F /* SettingsViewModel.swift in Sources */,

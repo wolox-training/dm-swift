@@ -66,6 +66,10 @@ extension UIImage {
         return UIImage(named: "blueButton")!
     }
     
+    static var addImage: UIImage {
+        return UIImage(named: "addImage")!
+    }
+    
 }
 
 extension UIImageView {

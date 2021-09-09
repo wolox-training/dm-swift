@@ -9,7 +9,7 @@
 /* NAVIGATION CONTROLLER TITLES*/
 "TITLE_LIBRARY" = "LIBRARY";
 "TITLE_WISHLIST" = "WISHLIST";
-"TITLE_ADDNEW" = "ADD NEW";
+"TITLE_ADDNEW" = "ADD NEW BOOK";
 "TITLE_RENTALS" = "RENTALS";
 "TITLE_SETTINGS" = "SETTINGS";
 "TITLE_DETAILBOOK" = "DETAIL";
@@ -17,6 +17,7 @@
 /* TITLES BUTTONS */
 "BUTTON_WIHSLIST" = "ADD TO WISHLIST";
 "BUTTON_RENT" = "RENT";
+"BUTTON_SUBMIT" = "SUBMIT";
 
 /* ALERTS */
 "TITLE_INFORMATION" = "INFORMATION";
@@ -24,4 +25,17 @@
 "BUTTON_DONE" = "DONE";
 "ERROR_UNAVAILABLE" = "The book is unavailable";
 "ERROR_GENERAL" = "The book could not be rented, try again later";
+"ERROR_ADDBOOK" = "The book could not be added, please try again later";
+"ERROR_EMPY_TEXTFLIED" = "The fields do not. they can be empty";
 "INFORMATION_SUCCESS" = "The book has been reserved successfully";
+"ADDBOOK_SUCCESS" = "The book has been added successfully";
+"OPTION_GALLERY" = "Gallery";
+"OPTION_CAMERA" = "Camera";
+"OPTION_CANCEL" = "Cancel";
+
+/* TEXTFIELD PLACEHOLDER */
+"BOOK_NAME_TEXTFIELD" = "Book`s name";
+"YEAR_TEXTFIELD" = "Year";
+"AUTHOR_TEXTIFLED" = "Author";
+"TOPIC_TEXTIFLED" = "Topic";
+"DESCRIPTION_TEXTIFLED" = "Description";
