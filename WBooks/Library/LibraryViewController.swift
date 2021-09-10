@@ -40,10 +40,10 @@ class LibraryViewController: UIViewController {
     }
     
     func getRents() {
-        libraryViewModel.getBooks() { [self] in
-            let booksViewModel = libraryViewModel.createBooksViewModel()
-            booksViewController = BooksViewController(booksViewModel: booksViewModel)
-            addSection(booksViewController, libraryView.booksContent)
+        libraryViewModel.getBooks() { [weak self] in
+            let booksViewModel = self?.libraryViewModel.createBooksViewModel()
+            self?.booksViewController = BooksViewController(booksViewModel: booksViewModel!)
+            self?.addSection(self!.booksViewController, self!.libraryView.booksContent)
         }
     }
     

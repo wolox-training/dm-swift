@@ -32,12 +32,12 @@ class SuggestionsViewController: UIViewController {
         view = suggestionView
     }
     
-    func getSuggestions() {
-        suggestionsViewModel.getSuggestions { books in
+    private func getSuggestions() {
+        suggestionsViewModel.getSuggestions { [weak self] books in
             if !books.isEmpty {
-                self.suggestionView.suggestBooks.reloadData()
+                self?.suggestionView.suggestBooks.reloadData()
             } else {
-                self.suggestionView.generalView.isHidden = true
+                self?.suggestionView.generalView.isHidden = true
             }
         }
     }

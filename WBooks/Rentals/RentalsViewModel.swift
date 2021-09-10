@@ -18,7 +18,7 @@ class RentalsViewModel {
         rents = []
     }
     
-    func getSuggestBooks(action: @escaping () -> () ) {
+    func getSuggestBooks(action: @escaping () -> Void ) {
         
         let onSuccess = { (suggestions: [Suggestion]) in
             self.suggestions = suggestions
