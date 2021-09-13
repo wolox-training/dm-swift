@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuggestionsView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="generalView" destination="0ur-0G-Sze" id="jjD-eL-Rc2"/>
+                <outlet property="suggestBooks" destination="Fr9-bu-6ue" id="xa7-WL-xj9"/>
+                <outlet property="suggestionsTitle" destination="YCz-5A-lAN" id="xDT-9T-nIK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0ur-0G-Sze">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCz-5A-lAN">
+                    <rect key="frame" x="20" y="10" width="364" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fr9-bu-6ue">
+                    <rect key="frame" x="20" y="40.5" width="364" height="143.5"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="deB-5e-4hJ">
+                        <size key="itemSize" width="60" height="80"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="13" maxY="13"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vYe-Yv-EVZ"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YCz-5A-lAN" firstAttribute="leading" secondItem="vYe-Yv-EVZ" secondAttribute="leading" constant="20" id="An3-UG-a1p"/>
+                <constraint firstItem="vYe-Yv-EVZ" firstAttribute="bottom" secondItem="Fr9-bu-6ue" secondAttribute="bottom" constant="10" id="CTJ-Yc-nlu"/>
+                <constraint firstItem="vYe-Yv-EVZ" firstAttribute="trailing" secondItem="Fr9-bu-6ue" secondAttribute="trailing" constant="20" id="GUK-Uc-vmu"/>
+                <constraint firstItem="Fr9-bu-6ue" firstAttribute="top" secondItem="YCz-5A-lAN" secondAttribute="bottom" constant="10" id="OPB-kU-Hod"/>
+                <constraint firstItem="vYe-Yv-EVZ" firstAttribute="trailing" secondItem="YCz-5A-lAN" secondAttribute="trailing" constant="20" id="bFh-Bg-lKe"/>
+                <constraint firstItem="YCz-5A-lAN" firstAttribute="top" secondItem="vYe-Yv-EVZ" secondAttribute="top" constant="10" id="cCK-or-FUn"/>
+                <constraint firstItem="Fr9-bu-6ue" firstAttribute="leading" secondItem="vYe-Yv-EVZ" secondAttribute="leading" constant="20" id="rjf-Jt-any"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="169.59999999999999" y="-51.27436281859071"/>
+        </view>
+    </objects>
+</document>

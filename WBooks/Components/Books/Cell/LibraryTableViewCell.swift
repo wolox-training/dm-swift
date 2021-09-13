@@ -19,17 +19,20 @@ class LibraryTableViewCell: UITableViewCell {
             containerView.layer.masksToBounds = false
         }
     }
+    
     @IBOutlet weak var bookImage: UIImageView! {
         didSet {
             bookImage.contentMode = .scaleAspectFill
         }
     }
+    
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
             titleLabel.font = UIFont.gillSansTitle
             titleLabel.textColor = UIColor.darkGray
         }
     }
+    
     @IBOutlet weak var autorLabel: UILabel! {
         didSet {
             autorLabel.font = UIFont.gillSansSubtitle

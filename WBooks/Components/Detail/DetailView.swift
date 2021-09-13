@@ -10,8 +10,8 @@ import UIKit
 
 final class DetailView: NibView {
     
-    @IBOutlet var viewGeneral: UIView!{
-        didSet{
+    @IBOutlet var viewGeneral: UIView! {
+        didSet {
             viewGeneral.backgroundColor = .white
             viewGeneral.layer.cornerRadius = 10
             viewGeneral.layer.shadowColor = UIColor.darkGray.cgColor
@@ -21,44 +21,52 @@ final class DetailView: NibView {
             viewGeneral.layer.masksToBounds = false
         }
     }
+    
     @IBOutlet weak var bookImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!{
-        didSet{
+    
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
             titleLabel.font = .gillSansBoldTitle
         }
     }
-    @IBOutlet weak var statusLabel: UILabel!{
-        didSet{
+    
+    @IBOutlet weak var statusLabel: UILabel! {
+        didSet {
             statusLabel.font = .gillSansBoldSubtitle
             statusLabel.textColor = .wildWillow
         }
     }
-    @IBOutlet weak var authorLabel: UILabel!{
-        didSet{
+    
+    @IBOutlet weak var authorLabel: UILabel! {
+        didSet {
             authorLabel.font = .gillSansSubtitle
             authorLabel.textColor = .lightGray
         }
     }
-    @IBOutlet weak var yearLabel: UILabel!{
-        didSet{
+    
+    @IBOutlet weak var yearLabel: UILabel! {
+        didSet {
             yearLabel.font = .gillSansSubtitle
             yearLabel.textColor = .lightGray
         }
     }
-    @IBOutlet weak var genreLabel: UILabel!{
-        didSet{
+    
+    @IBOutlet weak var genreLabel: UILabel! {
+        didSet {
             genreLabel.font = .gillSansSubtitle
             genreLabel.textColor = .lightGray
         }
     }
-    @IBOutlet weak var addWishlistButton: UIButton!{
-        didSet{
+    
+    @IBOutlet weak var addWishlistButton: UIButton! {
+        didSet {
             addWishlistButton.setTitle(NSLocalizedString("BUTTON_WIHSLIST", comment: ""), for: .normal)
             addWishlistButton.backgroundWhite()
         }
     }
-    @IBOutlet weak var rentButton: UIButton!{
-        didSet{
+    
+    @IBOutlet weak var rentButton: UIButton! {
+        didSet {
             rentButton.setTitle(NSLocalizedString("BUTTON_RENT", comment: ""), for: .normal)
             rentButton.withGradient()
         }

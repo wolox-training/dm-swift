@@ -8,31 +8,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryView" customModule="WBooks" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BooksView" customModule="WBooks" customModuleProvider="target">
             <connections>
-                <outlet property="booksContent" destination="yor-Pj-ihN" id="JcC-6b-BVk"/>
-                <outlet property="generalView" destination="cOb-d2-E93" id="K5q-Ng-Luj"/>
+                <outlet property="generalView" destination="ki5-rv-hEo" id="GiM-fB-29x"/>
+                <outlet property="tableView" destination="fC0-Ds-CVe" id="Hhk-H3-gyj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="cOb-d2-E93">
+        <view contentMode="scaleToFill" id="ki5-rv-hEo">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yor-Pj-ihN">
-                    <rect key="frame" x="0.0" y="10" width="375" height="657"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-Ds-CVe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
+                </tableView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="lOm-hu-hdS"/>
+            <viewLayoutGuide key="safeArea" id="GHv-IM-geG"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="yor-Pj-ihN" firstAttribute="top" secondItem="lOm-hu-hdS" secondAttribute="top" constant="10" id="6EA-5u-lvt"/>
-                <constraint firstItem="lOm-hu-hdS" firstAttribute="bottom" secondItem="yor-Pj-ihN" secondAttribute="bottom" id="aCQ-Ps-Zcu"/>
-                <constraint firstItem="yor-Pj-ihN" firstAttribute="leading" secondItem="lOm-hu-hdS" secondAttribute="leading" id="bgO-Ya-0wc"/>
-                <constraint firstItem="lOm-hu-hdS" firstAttribute="trailing" secondItem="yor-Pj-ihN" secondAttribute="trailing" id="eal-1g-4z9"/>
+                <constraint firstItem="fC0-Ds-CVe" firstAttribute="top" secondItem="GHv-IM-geG" secondAttribute="top" id="bIc-FE-iHg"/>
+                <constraint firstItem="GHv-IM-geG" firstAttribute="trailing" secondItem="fC0-Ds-CVe" secondAttribute="trailing" id="dDX-8i-cbS"/>
+                <constraint firstItem="GHv-IM-geG" firstAttribute="bottom" secondItem="fC0-Ds-CVe" secondAttribute="bottom" id="jd5-U2-cdq"/>
+                <constraint firstItem="fC0-Ds-CVe" firstAttribute="leading" secondItem="GHv-IM-geG" secondAttribute="leading" id="v8q-0i-C5J"/>
             </constraints>
-            <point key="canvasLocation" x="204" y="-40"/>
+            <point key="canvasLocation" x="373.60000000000002" y="141.67916041979012"/>
         </view>
     </objects>
     <resources>

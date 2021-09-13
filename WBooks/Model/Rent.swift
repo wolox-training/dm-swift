@@ -22,3 +22,15 @@ struct Rent: Codable {
     }
 
 }
+
+struct RentBook: Codable {
+    
+    let userId: Int
+    let bookId: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case bookId = "book_id"
+    }
+
+}

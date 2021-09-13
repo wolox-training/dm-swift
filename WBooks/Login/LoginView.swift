@@ -10,13 +10,13 @@ import UIKit
 
 final class LoginView: NibView {
     
-    @IBOutlet weak var titleLabel: UILabel!{
+    @IBOutlet weak var titleLabel: UILabel! {
         didSet {
             titleLabel.text = "Login"
         }
     }
     
-    @IBOutlet weak var loginButton: UIButton!{
+    @IBOutlet weak var loginButton: UIButton! {
         didSet {
             loginButton.titleLabel?.text = "Ingresar"
         }

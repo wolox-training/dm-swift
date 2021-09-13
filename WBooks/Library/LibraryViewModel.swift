@@ -38,4 +38,8 @@ class LibraryViewModel {
         repository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
     
+    func createBooksViewModel() -> BooksViewModel {
+        return BooksViewModel(books: books)
+    }
+    
 }
